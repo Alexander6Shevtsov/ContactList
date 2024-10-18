@@ -9,7 +9,7 @@ import UIKit
 
 final class ContactListViewController: UITableViewController {
 
-    var persons: [Person]!
+    var persons: [Person]! // массив с типом Person
     
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

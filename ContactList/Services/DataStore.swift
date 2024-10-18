@@ -5,10 +5,11 @@
 //  Created by Alexander Shevtsov on 14.10.2024.
 //
 
+// должен храниться в отдельной директории(папке) Services
 final class DataStore {
     
     static let shared = DataStore()
-    
+    // если нет функции редактирования -> все let!
     let names = [
         "John",
         "Aaron",

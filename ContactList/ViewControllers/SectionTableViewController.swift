@@ -13,9 +13,9 @@ final class SectionTableViewController: UITableViewController {
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        persons.count
+        persons.count // кол секций = кол элем в массиве
     }
-    
+    // определяем название для секции
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         persons[section].fullName
     }
@@ -26,10 +26,10 @@ final class SectionTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        let person = persons[indexPath.section]
+        // обращаемся к массиву persons по индексу секции
+        let person = persons[indexPath.section] // экземпляр модели
         var content = cell.defaultContentConfiguration()
-        
+        // в зависимости от строки присваиваем значение
         switch indexPath.row {
         case 0:
             content.text = person.phoneNumber
@@ -43,7 +43,7 @@ final class SectionTableViewController: UITableViewController {
         
         return cell
     }
-    
+    // метод снимает выделение с ячейки
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }

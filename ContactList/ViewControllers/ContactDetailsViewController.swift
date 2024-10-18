@@ -16,7 +16,7 @@ final class ContactDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // присваивание заголовка
         title = person.fullName
         emailLabel.text = "Email: \(person.email)"
         phoneNumberLabel.text =  "Phone: \(person.phoneNumber)"
